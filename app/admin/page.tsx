@@ -171,7 +171,7 @@ export default function AdminPage() {
         <Card className="w-full max-w-md p-8">
           <div className="text-center mb-8">
             <h1 className="text-2xl font-bold mb-2">Admin Login</h1>
-            <p className="text-muted-foreground">Sign in to manage quote requests</p>
+            <p className="text-muted-foreground">Sign in to manage quotes requests</p>
           </div>
 
           {loginError && (
