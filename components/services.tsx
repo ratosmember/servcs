@@ -1,30 +1,30 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Sparkles, Home, Building2, TruckIcon } from "lucide-react"
+import { Sparkles, Building2, TruckIcon, Briefcase } from "lucide-react"
 
 const services = [
   {
-    icon: Sparkles,
-    title: "Deep Clean",
-    description:
-      "Our comprehensive deep cleaning service tackles every corner of your space. We go beyond surface cleaning to sanitize, scrub, and polish, ensuring your home or office sparkles from top to bottom.",
-  },
-  {
-    icon: Home,
-    title: "Residential",
-    description:
-      "Keep your home fresh and inviting with our regular residential cleaning services. Customized to your needs, we handle everything from dusting and vacuuming to kitchen and bathroom sanitization.",
-  },
-  {
     icon: Building2,
-    title: "Commercial",
+    title: "Corporate Office Cleaning",
     description:
-      "Make the right impression with a spotless workplace. Our commercial cleaning services maintain a professional, hygienic environment for your employees and clients, keeping your business looking its best.",
+      "Keep your corporate environment impeccable. We deliver executive-level cleaning for offices, lobbies, conference rooms, and shared spaces -- creating first impressions that reflect your brand's excellence.",
+  },
+  {
+    icon: Briefcase,
+    title: "Commercial Facility Maintenance",
+    description:
+      "Comprehensive cleaning solutions for retail spaces, medical offices, and commercial properties. We maintain the highest standards of hygiene and presentation your business demands.",
+  },
+  {
+    icon: Sparkles,
+    title: "Premium Deep Clean",
+    description:
+      "Our signature deep cleaning service goes beyond the surface. Ideal for post-construction, seasonal refreshes, or elevating any space to showroom condition with meticulous attention to detail.",
   },
   {
     icon: TruckIcon,
-    title: "Move In/Out Cleaning",
+    title: "Move In/Out & Turnover",
     description:
-      "Moving can be stressful—let us handle the cleaning. Our move in/out service ensures your old or new space is thoroughly cleaned, making transitions smoother and leaving properties inspection-ready.",
+      "Seamless property transitions for businesses and property managers. We ensure spaces are inspection-ready, whether you're relocating offices or preparing commercial units for new tenants.",
   },
 ]
 
@@ -33,9 +33,10 @@ export function Services() {
     <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Our Cleaning Services</h2>
+          <p className="text-xs uppercase tracking-[0.25em] text-gold-dark font-medium mb-3">What We Offer</p>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-balance">Our Premium Services</h2>
           <p className="text-lg text-muted-foreground text-balance max-w-2xl mx-auto leading-relaxed">
-            Professional cleaning solutions tailored to your specific needs
+            Tailored cleaning solutions for businesses that demand excellence
           </p>
         </div>
 
@@ -45,13 +46,13 @@ export function Services() {
             return (
               <Card
                 key={index}
-                className="border-2 border-border hover:border-primary transition-all duration-300 hover:shadow-lg"
+                className="border border-border hover:border-gold/50 transition-all duration-300 hover:shadow-lg bg-card"
               >
                 <CardContent className="p-6 md:p-8">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                        <Icon className="h-6 w-6 text-primary" />
+                      <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center">
+                        <Icon className="h-6 w-6 text-gold-dark" />
                       </div>
                     </div>
                     <div className="flex-1">

@@ -57,13 +57,15 @@ export default function ContactPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-b from-secondary/30 to-background py-16 md:py-24">
+        <section className="bg-black-rich py-16 md:py-24 relative">
+          <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Get In Touch</h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-pretty">
-                Ready to experience professional cleaning services? We'd love to hear from you. Contact us today for a
-                free estimate!
+              <p className="text-xs uppercase tracking-[0.25em] text-gold font-medium mb-4">Contact Us</p>
+              <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-balance text-cream">Get In Touch</h1>
+              <p className="text-lg md:text-xl text-cream/70 leading-relaxed text-pretty">
+                Ready to elevate your business environment? We'd love to discuss your cleaning needs. Contact us today for a
+                complimentary corporate estimate.
               </p>
             </div>
           </div>
@@ -86,8 +88,8 @@ export default function ContactPage() {
                 <div className="space-y-6">
                   <Card className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-full bg-primary/10">
-                        <Phone className="h-6 w-6 text-primary" />
+                      <div className="p-3 rounded-full bg-gold/10">
+                        <Phone className="h-6 w-6 text-gold-dark" />
                       </div>
                       <div>
                         <h3 className="font-semibold mb-2">Phone</h3>
@@ -100,16 +102,16 @@ export default function ContactPage() {
 
                   <Card className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-full bg-primary/10">
-                        <Mail className="h-6 w-6 text-primary" />
+                      <div className="p-3 rounded-full bg-gold/10">
+                        <Mail className="h-6 w-6 text-gold-dark" />
                       </div>
                       <div>
                         <h3 className="font-semibold mb-2">Email</h3>
                         <a
-                          href="mailto:info@twinsisterscleaning.com"
+                          href="mailto:info@signatureluxeservices.com"
                           className="text-muted-foreground hover:text-primary transition-colors"
                         >
-                          info@twinsisterscleaning.com
+                          info@signatureluxeservices.com
                         </a>
                       </div>
                     </div>
@@ -117,8 +119,8 @@ export default function ContactPage() {
 
                   <Card className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-full bg-primary/10">
-                        <MapPin className="h-6 w-6 text-primary" />
+                      <div className="p-3 rounded-full bg-gold/10">
+                        <MapPin className="h-6 w-6 text-gold-dark" />
                       </div>
                       <div>
                         <h3 className="font-semibold mb-2">Service Area</h3>
@@ -129,8 +131,8 @@ export default function ContactPage() {
 
                   <Card className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-full bg-primary/10">
-                        <Clock className="h-6 w-6 text-primary" />
+                      <div className="p-3 rounded-full bg-gold/10">
+                        <Clock className="h-6 w-6 text-gold-dark" />
                       </div>
                       <div>
                         <h3 className="font-semibold mb-2">Business Hours</h3>
@@ -171,9 +173,9 @@ export default function ContactPage() {
                     </div>
                   ) : (
                     <>
-                      <h2 className="text-2xl md:text-3xl font-bold mb-6">Request a Cleaning Quote</h2>
+                      <h2 className="font-serif text-2xl md:text-3xl font-bold mb-6">Request a Corporate Quote</h2>
                       <p className="text-muted-foreground mb-8 text-pretty">
-                        Fill out the form below and we'll get back to you with a free, no-obligation estimate within 24
+                        Fill out the form below and we'll get back to you with a complimentary, no-obligation estimate within 24
                         hours.
                       </p>
 
@@ -234,10 +236,11 @@ export default function ContactPage() {
                               disabled={isSubmitting}
                             >
                               <option value="">Select a service</option>
-                              <option value="deep-clean">Deep Cleaning</option>
+                              <option value="corporate-office">Corporate Office Cleaning</option>
+                              <option value="commercial">Commercial Facility Maintenance</option>
+                              <option value="deep-clean">Premium Deep Clean</option>
+                              <option value="move-in-out">Move In/Out & Turnover</option>
                               <option value="residential">Residential Cleaning</option>
-                              <option value="commercial">Commercial Cleaning</option>
-                              <option value="move-in-out">Move In/Out Cleaning</option>
                             </select>
                           </div>
                         </div>
