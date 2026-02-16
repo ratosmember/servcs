@@ -1,63 +1,70 @@
+"use client"
+
 import { CheckCircle, Gem, Shield, Award, Clock, Users } from "lucide-react"
-import { Card } from "@/components/ui/card"
+import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 export function WhyChooseUs() {
+  const ref = useScrollAnimation()
+
   const reasons = [
     {
       icon: CheckCircle,
       title: "Meticulous Standards",
-      description: "Every surface inspected, every corner addressed -- our detailed process ensures nothing is missed",
+      description: "Every surface inspected, every corner addressed with precision",
     },
     {
       icon: Gem,
       title: "Premium Service",
-      description: "Luxury-grade cleaning for businesses that refuse to compromise on quality or presentation",
+      description: "Luxury-grade cleaning for businesses that refuse to compromise",
     },
     {
       icon: Shield,
       title: "Licensed & Insured",
-      description: "Fully bonded, licensed, and insured for your complete confidence and protection",
+      description: "Fully bonded, licensed, and insured for your confidence",
     },
     {
       icon: Award,
-      title: "All Supplies Included",
-      description: "We bring commercial-grade, eco-friendly cleaning products and professional equipment",
+      title: "Supplies Included",
+      description: "Commercial-grade, eco-friendly products and equipment",
     },
     {
       icon: Clock,
       title: "Reliable & Punctual",
-      description: "Consistent scheduling that works around your business hours -- no disruptions",
+      description: "Consistent scheduling around your business hours",
     },
     {
       icon: Users,
       title: "Trained Professionals",
-      description: "Background-checked, uniformed teams trained in commercial cleaning protocols",
+      description: "Background-checked, uniformed teams with expertise",
     },
   ]
 
   return (
-    <section className="py-16 md:py-20 bg-black-rich">
+    <section ref={ref} className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
-          <p className="text-xs uppercase tracking-[0.25em] text-gold font-medium mb-3">The Signature Difference</p>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-cream">Why Businesses Choose Us</h2>
-          <p className="text-lg text-cream/60 max-w-2xl mx-auto text-pretty">
+        <div className="text-center mb-16 animate-on-scroll">
+          <p className="text-xs uppercase tracking-[0.3em] text-gold font-medium mb-4">The Signature Difference</p>
+          <h2 className="font-serif text-3xl md:text-5xl font-bold mb-5 text-cream">Why Businesses Choose Us</h2>
+          <div className="w-16 h-[2px] bg-gold/40 mx-auto mb-6" />
+          <p className="text-lg text-cream/50 max-w-2xl mx-auto">
             Discover what makes Signature Luxe the preferred cleaning partner for businesses across Charlotte
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto stagger-children">
           {reasons.map((reason, index) => {
             const Icon = reason.icon
             return (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow bg-black-soft border-gold/10 hover:border-gold/30">
-                <div className="flex flex-col items-center text-center space-y-4">
-                  <div className="p-4 rounded-full bg-gold/10">
-                    <Icon className="h-8 w-8 text-gold" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-cream">{reason.title}</h3>
-                  <p className="text-cream/60 text-pretty">{reason.description}</p>
+              <div
+                key={index}
+                className="animate-on-scroll group text-center p-6 rounded-xl border border-gold/8 bg-black-soft/30 hover:border-gold/20 hover:bg-black-soft/60 transition-all duration-500"
+              >
+                <div className="w-14 h-14 rounded-full bg-gold/8 flex items-center justify-center mx-auto mb-5 group-hover:bg-gold/15 transition-colors duration-300">
+                  <Icon className="h-7 w-7 text-gold" />
                 </div>
-              </Card>
+                <h3 className="text-lg font-semibold text-cream mb-2">{reason.title}</h3>
+                <p className="text-cream/45 leading-relaxed text-sm">{reason.description}</p>
+              </div>
             )
           })}
         </div>

@@ -1,63 +1,48 @@
+"use client"
+
 import { MapPin } from "lucide-react"
+import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 const cities = [
-  "Charlotte",
-  "Concord",
-  "Davidson",
-  "Fort Mill",
-  "Harrisburg",
-  "Huntersville",
-  "Indian Land",
-  "Indian Trail",
-  "Marvin",
-  "Matthews",
-  "Mint Hill",
-  "Monroe",
-  "Mount Holly",
-  "Pineville",
-  "Waxhaw",
-  "Wellington",
-  "Weddington",
-  "Stallings",
-  "Wesley Chapel",
-  "Hemby Bridge",
-  "Lake Park",
-  "Fairview",
-  "Ballantyne",
-  "Stanfield",
-  "Locust",
-  "Midland",
-  "Cornelius",
-  "Belmont",
-  "Gastonia",
-  "Lowell",
-  "Tega Cay",
+  "Charlotte", "Concord", "Davidson", "Fort Mill", "Harrisburg", "Huntersville",
+  "Indian Land", "Indian Trail", "Marvin", "Matthews", "Mint Hill", "Monroe",
+  "Mount Holly", "Pineville", "Waxhaw", "Weddington", "Stallings", "Wesley Chapel",
+  "Lake Park", "Fairview", "Ballantyne", "Cornelius", "Belmont", "Gastonia",
+  "Lowell", "Tega Cay", "Midland", "Locust",
 ]
 
 export function ServiceAreas() {
+  const ref = useScrollAnimation()
+
   return (
-    <section className="py-16 md:py-24 bg-muted/30">
+    <section ref={ref} className="py-20 md:py-28 bg-black-soft relative">
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
-          <p className="text-xs uppercase tracking-[0.25em] text-gold-dark font-medium mb-3">Service Coverage</p>
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <MapPin className="h-6 w-6 text-gold-dark" />
-            <h2 className="font-serif text-3xl md:text-4xl font-bold">Areas We Serve</h2>
+        <div className="text-center mb-14 animate-on-scroll">
+          <p className="text-xs uppercase tracking-[0.3em] text-gold font-medium mb-4">Service Coverage</p>
+          <div className="flex items-center justify-center gap-3 mb-5">
+            <MapPin className="h-6 w-6 text-gold" />
+            <h2 className="font-serif text-3xl md:text-5xl font-bold text-cream">Areas We Serve</h2>
           </div>
-          <p className="text-lg text-muted-foreground text-balance max-w-2xl mx-auto leading-relaxed">
-            Proudly serving Charlotte and the surrounding communities throughout North Carolina and South Carolina
+          <div className="w-16 h-[2px] bg-gold/40 mx-auto mb-6" />
+          <p className="text-lg text-cream/50 max-w-2xl mx-auto leading-relaxed">
+            Proudly serving Charlotte and surrounding communities across North and South Carolina
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
-          <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-3">
+        <div className="max-w-4xl mx-auto animate-on-scroll">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
             {cities.map((city, index) => (
-              <li key={index} className="flex items-start gap-2 text-foreground">
-                <span className="text-gold-dark mt-1">•</span>
-                <span className="text-sm md:text-base">{city}</span>
-              </li>
+              <div
+                key={index}
+                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-background/50 border border-gold/8 hover:border-gold/20 transition-colors duration-300"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-gold/60 shrink-0" />
+                <span className="text-sm text-cream/70">{city}</span>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </section>

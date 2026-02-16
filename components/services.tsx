@@ -1,69 +1,83 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Sparkles, Building2, TruckIcon, Briefcase } from "lucide-react"
+"use client"
+
+import { Sparkles, Building2, TruckIcon, Briefcase, ArrowRight } from "lucide-react"
+import Link from "next/link"
+import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 const services = [
   {
     icon: Building2,
     title: "Corporate Office Cleaning",
     description:
-      "Keep your corporate environment impeccable. We deliver executive-level cleaning for offices, lobbies, conference rooms, and shared spaces -- creating first impressions that reflect your brand's excellence.",
+      "Executive-level cleaning for offices, lobbies, conference rooms, and shared spaces -- creating first impressions that reflect your brand.",
   },
   {
     icon: Briefcase,
     title: "Commercial Facility Maintenance",
     description:
-      "Comprehensive cleaning solutions for retail spaces, medical offices, and commercial properties. We maintain the highest standards of hygiene and presentation your business demands.",
+      "Comprehensive cleaning for retail spaces, medical offices, and commercial properties with industry-specific protocols.",
   },
   {
     icon: Sparkles,
     title: "Premium Deep Clean",
     description:
-      "Our signature deep cleaning service goes beyond the surface. Ideal for post-construction, seasonal refreshes, or elevating any space to showroom condition with meticulous attention to detail.",
+      "Our signature service goes beyond the surface. Ideal for post-construction, seasonal refreshes, or showroom-condition results.",
   },
   {
     icon: TruckIcon,
     title: "Move In/Out & Turnover",
     description:
-      "Seamless property transitions for businesses and property managers. We ensure spaces are inspection-ready, whether you're relocating offices or preparing commercial units for new tenants.",
+      "Seamless property transitions for businesses and property managers. Spaces left inspection-ready, guaranteed.",
   },
 ]
 
 export function Services() {
+  const ref = useScrollAnimation()
+
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section ref={ref} className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12 md:mb-16">
-          <p className="text-xs uppercase tracking-[0.25em] text-gold-dark font-medium mb-3">What We Offer</p>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-balance">Our Premium Services</h2>
-          <p className="text-lg text-muted-foreground text-balance max-w-2xl mx-auto leading-relaxed">
+        <div className="text-center mb-16 animate-on-scroll">
+          <p className="text-xs uppercase tracking-[0.3em] text-gold font-medium mb-4">What We Offer</p>
+          <h2 className="font-serif text-3xl md:text-5xl font-bold mb-5 text-cream">Our Premium Services</h2>
+          <div className="w-16 h-[2px] bg-gold/40 mx-auto mb-6" />
+          <p className="text-lg text-cream/50 max-w-2xl mx-auto leading-relaxed">
             Tailored cleaning solutions for businesses that demand excellence
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto stagger-children">
           {services.map((service, index) => {
             const Icon = service.icon
             return (
-              <Card
+              <div
                 key={index}
-                className="border border-border hover:border-gold/50 transition-all duration-300 hover:shadow-lg bg-card"
+                className="animate-on-scroll group relative p-6 md:p-8 rounded-xl border border-gold/10 bg-black-soft/50 hover:border-gold/30 hover:bg-black-soft transition-all duration-500 hover:shadow-xl hover:shadow-gold/5"
               >
-                <CardContent className="p-6 md:p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center">
-                        <Icon className="h-6 w-6 text-gold-dark" />
-                      </div>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{service.description}</p>
-                    </div>
+                <div className="flex items-start gap-5">
+                  <div className="shrink-0 w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors duration-300">
+                    <Icon className="h-7 w-7 text-gold" />
                   </div>
-                </CardContent>
-              </Card>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg md:text-xl font-bold text-cream mb-2 group-hover:text-gold transition-colors duration-300">
+                      {service.title}
+                    </h3>
+                    <p className="text-cream/50 leading-relaxed text-sm md:text-base">{service.description}</p>
+                  </div>
+                </div>
+              </div>
             )
           })}
+        </div>
+
+        <div className="text-center mt-12 animate-on-scroll">
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 text-gold hover:text-gold-light font-medium transition-colors group"
+          >
+            View All Services
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
       </div>
     </section>
