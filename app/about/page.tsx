@@ -66,7 +66,7 @@ export default function AboutPage() {
               <div className="w-16 h-[2px] bg-gold/40 mx-auto mb-8" />
               <p className="text-lg md:text-xl text-cream/60 leading-relaxed">
                 A premium cleaning company based in Charlotte, NC. We specialize in
-                executive-level commercial and residential cleaning with impeccable standards.
+                executive-level commercial cleaning with impeccable standards.
               </p>
             </div>
           </div>

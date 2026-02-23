@@ -29,7 +29,7 @@ export default function ServicesPage() {
       title: "Commercial Facility Maintenance",
       image: "/professional-deep-cleaning-service-sparkling-clean.jpg",
       description:
-        "Comprehensive cleaning programs for retail spaces, medical offices, fitness centers, and commercial properties with industry-specific standards.",
+        "Comprehensive cleaning programs for retail spaces, fitness centers, restaurants, and commercial properties with industry-specific standards.",
       features: [
         "Industry-specific cleaning protocols",
         "Floor care (vacuum, mop, polish, strip & wax)",
@@ -40,31 +40,31 @@ export default function ServicesPage() {
       ],
     },
     {
-      title: "Premium Deep Clean",
+      title: "Medical Facility Cleaning",
       image: "/clean-modern-home-living-room-sparkling-fresh.jpg",
       description:
-        "Our signature deep cleaning service goes beyond standard maintenance. Ideal for post-construction, seasonal refreshes, or showroom-condition results.",
+        "Specialized sanitization protocols for clinics, dental offices, urgent care centers, and other medical facilities. We meet strict health and safety compliance standards to protect your staff and patients.",
       features: [
-        "Comprehensive top-to-bottom deep cleaning",
-        "Behind and under all furniture and fixtures",
-        "Baseboards, window sills, and architectural details",
-        "Cabinet and storage area detailing (inside & out)",
-        "Light fixture and ceiling fan restoration",
-        "Deep kitchen and bathroom sanitization",
+        "Healthcare-grade disinfection protocols",
+        "Waiting room and patient area sanitization",
+        "Exam room deep cleaning between patients",
+        "Restroom and common area maintenance",
+        "Biohazard-aware cleaning procedures",
+        "HIPAA-conscious service approach",
       ],
     },
     {
-      title: "Move In/Out & Turnover",
+      title: "Industrial & Warehouse Cleaning",
       image: "/empty-clean-apartment-moving-boxes-spotless.jpg",
       description:
-        "Seamless property transitions for businesses and property managers. Spaces left inspection-ready, guaranteed.",
+        "Heavy-duty cleaning solutions for warehouses, manufacturing floors, and industrial workspaces. We keep your operations running smoothly in a clean, safe environment.",
       features: [
-        "Complete top-to-bottom property preparation",
-        "Appliance cleaning (inside & out)",
-        "Cabinet, closet, and storage area detailing",
-        "Window and glass cleaning",
-        "Floor deep cleaning and treatment",
-        "Final walkthrough and inspection guarantee",
+        "Warehouse floor sweeping and scrubbing",
+        "Loading dock and entryway cleaning",
+        "Breakroom and office area maintenance",
+        "Dust and debris removal from surfaces",
+        "Restroom cleaning and restocking",
+        "Safety-compliant cleaning procedures",
       ],
     },
   ]
@@ -81,10 +81,10 @@ export default function ServicesPage() {
           <div className="container mx-auto px-4 md:px-6 relative z-10">
             <div className="max-w-3xl mx-auto text-center animate-on-scroll">
               <p className="text-xs uppercase tracking-[0.3em] text-gold font-medium mb-4">Our Expertise</p>
-              <h1 className="font-serif text-4xl md:text-6xl font-bold mb-6 text-cream">Premium Cleaning Services</h1>
+              <h1 className="font-serif text-4xl md:text-6xl font-bold mb-6 text-cream">Commercial Cleaning Services</h1>
               <div className="w-16 h-[2px] bg-gold/40 mx-auto mb-8" />
               <p className="text-lg md:text-xl text-cream/60 leading-relaxed">
-                Executive-level cleaning solutions tailored to your business needs. Impeccable results, every time.
+                Executive-level commercial cleaning solutions tailored to your business needs. Impeccable results, every time.
               </p>
             </div>
           </div>
@@ -148,7 +148,7 @@ export default function ServicesPage() {
             </h2>
             <div className="w-16 h-[2px] bg-gold/40 mx-auto mb-6" />
             <p className="text-lg text-cream/50 mb-10 max-w-2xl mx-auto">
-              Let Signature Luxe transform your business environment with our premium cleaning services.
+              Let Signature Luxe transform your business environment with our commercial cleaning services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">

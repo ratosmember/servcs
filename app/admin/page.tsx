@@ -139,10 +139,10 @@ export default function AdminPage() {
 
   const getServiceName = (service: string) => {
     const services: Record<string, string> = {
-      "deep-clean": "Deep Cleaning",
-      residential: "Residential Cleaning",
-      commercial: "Commercial Cleaning",
-      "move-in-out": "Move In/Out Cleaning",
+      "corporate-office": "Corporate Office Cleaning",
+      commercial: "Commercial Facility Maintenance",
+      medical: "Medical Facility Cleaning",
+      industrial: "Industrial & Warehouse Cleaning",
     }
     return services[service] || service
   }

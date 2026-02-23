@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Phone, Building2, Shield, MapPin, ArrowRight } from "lucide-react"
+import { Phone, Building2, Shield, MapPin, ArrowRight, Sparkles } from "lucide-react"
 import { useEffect, useState } from "react"
 
 export function Hero() {
@@ -57,8 +57,11 @@ export function Hero() {
               loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
-            <span className="text-cream block">Elevate Your Business</span>
-            <span className="gold-shimmer block mt-2">With Pristine Spaces</span>
+            <span className="text-cream block">Professional Cleaning</span>
+            <span className="gold-shimmer block mt-2 inline-flex items-center gap-3">
+              Services You Can Trust
+              <Sparkles className="h-8 w-8 md:h-10 md:w-10 text-gold animate-pulse inline-block" />
+            </span>
           </h1>
 
           {/* Description */}
@@ -68,7 +71,7 @@ export function Hero() {
             }`}
           >
             Signature Luxe Cleaning Services delivers executive-level cleanliness for corporate offices,
-            commercial facilities, and high-end properties throughout Charlotte.
+            commercial facilities, and medical spaces throughout Charlotte.
           </p>
 
           {/* CTA Buttons */}

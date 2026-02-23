@@ -34,14 +34,14 @@ export function Header() {
             : "bg-black-rich border-b border-gold/5"
         }`}
       >
-        <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-          <Link href="/" className="flex items-center gap-3 shrink-0">
+        <div className="container mx-auto flex h-24 items-center justify-between px-4 md:px-6">
+          <Link href="/" className="flex items-center shrink-0">
             <Image
               src="/logo.png"
               alt="Signature Luxe Cleaning Services"
-              width={180}
-              height={60}
-              className="h-14 w-auto"
+              width={280}
+              height={93}
+              className="h-20 md:h-24 w-auto"
               priority
             />
           </Link>
@@ -110,7 +110,7 @@ export function Header() {
 
       {/* Mobile menu panel */}
       <div
-        className={`fixed top-20 right-0 z-40 h-[calc(100dvh-5rem)] w-72 bg-black-rich border-l border-gold/10 transition-transform duration-300 ease-out md:hidden ${
+        className={`fixed top-24 right-0 z-40 h-[calc(100dvh-6rem)] w-72 bg-black-rich border-l border-gold/10 transition-transform duration-300 ease-out md:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

@@ -231,9 +231,8 @@ export default function ContactPage() {
                               <option value="" className="bg-black-rich text-cream/50">Select a service</option>
                               <option value="corporate-office" className="bg-black-rich text-cream">Corporate Office Cleaning</option>
                               <option value="commercial" className="bg-black-rich text-cream">Commercial Facility Maintenance</option>
-                              <option value="deep-clean" className="bg-black-rich text-cream">Premium Deep Clean</option>
-                              <option value="move-in-out" className="bg-black-rich text-cream">Move In/Out & Turnover</option>
-                              <option value="residential" className="bg-black-rich text-cream">Residential Cleaning</option>
+                              <option value="medical" className="bg-black-rich text-cream">Medical Facility Cleaning</option>
+                              <option value="industrial" className="bg-black-rich text-cream">Industrial & Warehouse Cleaning</option>
                             </select>
                           </div>
                         </div>

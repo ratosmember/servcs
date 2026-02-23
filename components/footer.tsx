@@ -18,10 +18,10 @@ export function Footer() {
               height={53}
               className="h-14 w-auto"
             />
-            <p className="text-sm text-cream/40 leading-relaxed max-w-sm">
-              Premium commercial and residential cleaning services for businesses throughout the Charlotte metropolitan area. Impeccable standards, every time.
+            <p className="text-sm text-cream/65 leading-relaxed max-w-sm">
+              Premium commercial cleaning services for businesses throughout the Charlotte metropolitan area. Impeccable standards, every time.
             </p>
-            <p className="text-xs text-cream/25">
+            <p className="text-xs text-cream/40">
               signatureluxeservices.com
             </p>
           </div>
@@ -39,7 +39,7 @@ export function Footer() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-sm text-cream/40 hover:text-gold transition-colors duration-300"
+                  className="text-sm text-cream/60 hover:text-gold transition-colors duration-300"
                 >
                   {item.label}
                 </Link>
@@ -53,19 +53,19 @@ export function Footer() {
             <div className="flex flex-col gap-4">
               <a
                 href="tel:7047715245"
-                className="flex items-center gap-3 text-sm text-cream/40 hover:text-gold transition-colors duration-300"
+                className="flex items-center gap-3 text-sm text-cream/60 hover:text-gold transition-colors duration-300"
               >
                 <Phone className="h-4 w-4 shrink-0 text-gold/50" />
                 <span>(704) 771-5245</span>
               </a>
               <a
                 href="mailto:info@signatureluxeservices.com"
-                className="flex items-center gap-3 text-sm text-cream/40 hover:text-gold transition-colors duration-300"
+                className="flex items-center gap-3 text-sm text-cream/60 hover:text-gold transition-colors duration-300"
               >
                 <Mail className="h-4 w-4 shrink-0 text-gold/50" />
                 <span>info@signatureluxeservices.com</span>
               </a>
-              <div className="flex items-start gap-3 text-sm text-cream/40">
+              <div className="flex items-start gap-3 text-sm text-cream/60">
                 <MapPin className="h-4 w-4 shrink-0 mt-0.5 text-gold/50" />
                 <span>Charlotte, NC & Surrounding Areas</span>
               </div>
@@ -74,10 +74,10 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gold/8 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-cream/30">
+          <p className="text-xs text-cream/50">
             © {new Date().getFullYear()} Signature Luxe Cleaning Services. All rights reserved.
           </p>
-          <p className="text-xs text-cream/20">
+          <p className="text-xs text-cream/40">
             Licensed & Insured | Charlotte, NC
           </p>
         </div>

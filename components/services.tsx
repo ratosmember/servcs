@@ -1,6 +1,6 @@
 "use client"
 
-import { Sparkles, Building2, TruckIcon, Briefcase, ArrowRight } from "lucide-react"
+import { Building2, Briefcase, Stethoscope, Warehouse, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
@@ -15,19 +15,19 @@ const services = [
     icon: Briefcase,
     title: "Commercial Facility Maintenance",
     description:
-      "Comprehensive cleaning for retail spaces, medical offices, and commercial properties with industry-specific protocols.",
+      "Comprehensive cleaning for retail spaces, gyms, and commercial properties with industry-specific protocols and flexible scheduling.",
   },
   {
-    icon: Sparkles,
-    title: "Premium Deep Clean",
+    icon: Stethoscope,
+    title: "Medical Facility Cleaning",
     description:
-      "Our signature service goes beyond the surface. Ideal for post-construction, seasonal refreshes, or showroom-condition results.",
+      "Specialized sanitization for clinics, dental offices, and medical facilities -- meeting strict health and safety compliance standards.",
   },
   {
-    icon: TruckIcon,
-    title: "Move In/Out & Turnover",
+    icon: Warehouse,
+    title: "Industrial & Warehouse Cleaning",
     description:
-      "Seamless property transitions for businesses and property managers. Spaces left inspection-ready, guaranteed.",
+      "Heavy-duty cleaning for warehouses, manufacturing floors, and industrial spaces. Keeping operations running in a clean environment.",
   },
 ]
 
@@ -39,7 +39,7 @@ export function Services() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16 animate-on-scroll">
           <p className="text-xs uppercase tracking-[0.3em] text-gold font-medium mb-4">What We Offer</p>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold mb-5 text-cream">Our Premium Services</h2>
+          <h2 className="font-serif text-3xl md:text-5xl font-bold mb-5 text-cream">Our Commercial Services</h2>
           <div className="w-16 h-[2px] bg-gold/40 mx-auto mb-6" />
           <p className="text-lg text-cream/50 max-w-2xl mx-auto leading-relaxed">
             Tailored cleaning solutions for businesses that demand excellence

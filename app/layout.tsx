@@ -10,7 +10,7 @@ const _playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", 
 export const metadata: Metadata = {
   title: "Signature Luxe Cleaning Services - Premium Commercial Cleaning in Charlotte, NC",
   description:
-    "Premium commercial and residential cleaning services in Charlotte, NC. Signature Luxe Cleaning Services delivers executive-level cleanliness for businesses, offices, and corporate facilities.",
+    "Premium commercial cleaning services in Charlotte, NC. Signature Luxe Cleaning Services delivers executive-level cleanliness for businesses, offices, medical facilities, and corporate environments.",
   generator: "v0.app",
   icons: {
     icon: [
